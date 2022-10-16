@@ -1,0 +1,42 @@
+@forward 'typography'
+@use 'vars'
+@import 'colors'
+
+$br: 30px
+@mixin outline($color)
+	outline: 2px solid $color
+.btn
+	min-width: 200px
+	height: 55px
+	appearance: none
+	border: 0
+	border-radius: $br
+	background: linear-gradient(180deg, #FFFFFF 0%, #D1D1D1 100%)
+	box-shadow: vars.$shadow
+	color: $textBlack
+	padding: 10px 27px
+	cursor: pointer
+	text-decoration: none
+	text-align: center
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	transition: all 0.3s
+	@extend %menuText
+	&:hover, &:active
+		opacity: 0.8
+	&:focus
+		@include outline($cardBgLight)
+
+	&--blue
+		background: linear-gradient(180deg, #49C4F9 0%, #8584FF 50%, #5F39FF 100%)
+		color: $textWhite
+		min-width: 235px
+		&:focus 
+			@include outline($accentText)
+	&--pure
+		background: none
+		border: 1px solid
+		box-shadow: none
+		&:focus 
+			outline: 2px solid inherit

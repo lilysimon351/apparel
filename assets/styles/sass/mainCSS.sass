@@ -1,0 +1,169 @@
+@import 'buttons'
+@import 'vars'
+@import 'media'
+
+*, ::before, ::after
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+body
+    min-width: 320px
+.container
+    min-width: 290px
+    max-width: 1296px
+    width: 100%
+    margin: 0 auto
+    @include media-min($xs)
+        padding: 0 15px
+    @include media-min($sm)
+        padding: 0 40px
+    @include media-min($md)
+        padding: 0 12px
+    @include media-min($lg)
+        padding: 0
+
+.sr-only
+    border: 0
+    clip: rect(0 0 0 0)
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px)
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
+    white-space: nowrap
+    font-size: 0
+a
+    text-decoration: none
+    color: $accentText
+ul
+    list-style: none
+    
+.header
+    @extend %flex
+    justify-content: space-between
+    align-items: center
+    height: 100px
+    .logo-menu-wr
+        @extend %flex
+        align-items: center
+        margin-right: 54px
+    &__logo
+        display: block
+        margin-left: 38px
+        @extend %img-holder
+        img
+            width: 130px
+        &--mob 
+            display: none
+
+    &__menu
+        @extend %flex
+        margin: 0 -20px
+        li
+            margin: 4px 20px
+            @extend %menuText
+        a
+            color: $textBlack
+            transition: all 0.3s
+            &:hover
+                text-shadow: 1px 1px 4px rgb(0 0 0 / 60%)
+                
+    &__phone
+        margin-right: 25px
+        white-space: nowrap
+        &:focus
+            outline: none
+    &__social
+        @extend %flex
+        align-items: center
+        margin-left: 6% 
+    .svg-icon
+        fill: $textBlack
+
+.burger
+    @extend %img-holder
+
+.social
+    &__menu
+        @extend %img-holder
+        @extend %flex
+    &__menu-item
+        width: 32px
+        &:first-child
+            margin-right: 16px
+
+
+@include media-max($lg)
+    .header
+        .logo-menu-wr
+            margin-right: 6%
+        &__menu
+            flex-wrap: wrap
+            width: 356px
+        &__social
+            margin-left: 7%
+        &__phone
+            margin-right: 27px
+    .social
+        &__menu-item
+            &:first-child
+                margin-right: 26px
+
+
+@include media-max($md)
+    .header
+        &__logo
+            margin-left: 11px
+        &__menu
+            li
+                margin: 6.5px 25px
+                &:nth-child(1)
+                    order: -3
+                &:nth-child(2)
+                    order: -1
+                &:nth-child(3)
+                    order: -2
+        &__social
+            flex-direction: column-reverse
+            align-items: flex-end
+        &__phone
+            padding: 0
+            height: unset
+            min-width: unset
+            border: 0
+            margin: 15px 0 0 0
+    .social
+        &__menu-item
+            width: 22px
+            &:first-child
+                margin-right: 11px
+@include media-max($sm)
+    .header
+        &-wr
+            background: $mobBg
+        &__logo
+            margin-right: -22px
+            &--all
+                display: none
+            &--mob 
+                display: block
+        &__menu
+            display: none
+        &__phone
+            color: $textWhite
+            margin-top: 8px
+            letter-spacing: 0
+        .logo-menu-wr, &__social
+            width: 50%
+            margin: 0
+        &__social
+            margin-top: 25px
+        .logo-menu-wr
+            @include justify-between
+        .svg-icon
+            fill: $textWhite
+        

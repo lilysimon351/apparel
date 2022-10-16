@@ -1,0 +1,43 @@
+@use "sass:list"
+@import 'media'
+$bebas: ('Bebas Neue Cyrillic', sans-serif)
+$mont: ('Montserrat', sans-serif)
+
+// font shorthand mixin
+@mixin font( $size, $lh, $family: $mont)
+    $weight: 400
+    @if $family == $bebas
+        text-transform: uppercase
+    @else 
+        $weight: 500
+    font: normal normal $weight list.slash($size, $lh) $family  
+
+// names
+$types: (heading, subHeading, cardHeading, cardName, text, secText, techText, menuText, mobMenuText)
+
+$fonts: ( (36px, 36px, $bebas), (24px, 30px, $bebas), (60px, 60px, $bebas), (90px, 90px, $bebas), (16px, 28px), (14px, 28px), (12px, 28px), (14px, 17px), (10px, 12px) )
+
+// ********
+// * loop through the $types list,
+// * write interpolation for making class,
+// * include font mixin to set class content
+// ********
+$length: length($types)
+@for $i from 0 to $length
+    .#{nth($types, $i+1)}
+        @include font(nth($fonts, $i + 1)... )
+        @if (str-index(to-lower-case(#{nth($types, $i+1)}), 'menu'))
+            text-transform: uppercase
+            letter-spacing: 0.2em
+        @if ( nth($types, $i+1) == 'menuText' and ( $i+1 != $length ) )
+            @include media-max($md)
+                @include font(nth($fonts, $length)... )
+
+    #{'%'}#{nth($types, $i+1)}
+        @include font(nth($fonts, $i + 1)... )
+        @if (str-index(to-lower-case(#{nth($types, $i+1)}), 'menu'))
+            text-transform: uppercase
+            letter-spacing: 0.2em
+        @if (nth($types, $i+1)== 'menuText' and ($i+1 != $length))
+            @include media-max($md)
+                @include font(nth($fonts, $length)... )
