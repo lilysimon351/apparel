@@ -7,26 +7,30 @@
     <title>Apparel</title>
     <link rel="stylesheet" href="./assets/fonts/BebasNeueCyrillic/style.css">
     <link rel="stylesheet" href="./assets/fonts/MontserratMedium/style.css">
+    <link rel="stylesheet" href="./assets/scripts/slider/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/styles/mainCSS.min.css">
+    <link rel="stylesheet" href="./assets/styles/home.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- __________ HEADER __________ -->
     <div class="header-wr">
         <div class="container">
             <header class="header">
                 <div class="logo-menu-wr">
                     <div class="burger">
                         <svg class="svg-icon burger__icon" width="24" height="14"> 
-                            <use xlink:href="./assets/images/iconsSprite.svg#menu" />
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#menu" />
                         </svg>
                     </div>
                     
                     <a href="/" class="header__logo">
                         <span class="sr-only">Apparel Boats</span>
                         <svg class="svg-icon header__logo--all" width="130" height="44"> 
-                            <use xlink:href="./assets/images/iconsSprite.svg#logo" />
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#logo" />
                         </svg>
                         <svg class="svg-icon header__logo--mob" width="47" height="61"> 
-                            <use xlink:href="./assets/images/iconsSprite.svg#logo-vertical" />
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#logo-vertical" />
                         </svg>
                     </a>
                 </div>
@@ -43,13 +47,13 @@
                         <a class="social__menu-item" href="instagram.com" target="_blank">
                             <span class="sr-only">Инстаграм канал</span>
                             <svg class="svg-icon" width="32" height="32"> 
-                                <use xlink:href="./assets/images/iconsSprite.svg#insta" />
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#insta" />
                             </svg>
                         </a>
                         <a class="social__menu-item" href="youtube.com" target="_blank">
                             <span class="sr-only">Ютуб канал</span>
                             <svg class="svg-icon" width="32" height="32"> 
-                                <use xlink:href="./assets/images/iconsSprite.svg#yt" />
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#yt" />
                             </svg>
                         </a>
                     </div>
@@ -57,6 +61,145 @@
             </header>
         </div>
     </div>
+    <!-- __________ END HEADER __________ -->
+    <h1 class="main-title">
+        Производство <br /> грузопассажирских  <br /> алюминиевых лодок <br /> аппарельного типа
+    </h1>
+    <div class="bg-second">
+        <img class="compas" src="./assets/images/decor/compas.png" aria-hidden="true" >
+        <section class="choise-wr">
+            <div class="container">
+                <h2 class="heading choise__title">Выберите модель</h2>
+                <p class="text choise__subtitle">Популярные модели катеров</p>
+                <!-- Slider main container -->
+                <div class="choise__slider swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="choise__item swiper-slide">
+                        <img src="./assets/images/item1.png" alt="Apparel 1400">
+                        <img class="choise__img--mob" style="display: none;" src="./assets/images/item1alfa.png" alt="Apparel 1400">
+                        <h3 class="item__title">
+                            <span class="blue heading">Apparel</span>
+                            <span class="cardName">1400</span>
+                        </h3>
+                        <dl class="item__descr">
+                            <dd>
+                                <span class="blue cardHeading">70</span>
+                                км/ч
+                            </dd>
+                            <dt>Скорость</dt>
+                            <dd>
+                                <span class="blue cardHeading">2</span>
+                                места
+                            </dd>
+                            <dt>Рубка</dt>
+                            <dd>
+                                <span class="blue cardHeading">4</span>
+                                т
+                            </dd>
+                            <dt>Грузоподъемность</dt>
+                        </dl>
+                        <a class="btn btn-white choise__more" href="#">подробнее</a>
+                    </div>
+                    <div class="choise__item swiper-slide">
+                        <img src="./assets/images/item2.png" alt="Apparel 1400">
+                        <img class="choise__img--mob" style="display: none;"  src="./assets/images/item2alfa.png" alt="Apparel 1400">
+                        <h3 class="item__title">
+                            <span class="blue heading">Apparel</span>
+                            <span class="cardName">1400</span>
+                        </h3>
+                        <dl class="item__descr">
+                            <dd>
+                                <span class="blue cardHeading">70</span>
+                                км/ч
+                            </dd>
+                            <dt>Скорость</dt>
+                            <dd>
+                                <span class="blue cardHeading">2</span>
+                                места
+                            </dd>
+                            <dt>Рубка</dt>
+                            <dd>
+                                <span class="blue cardHeading">4</span>
+                                т
+                            </dd>
+                            <dt>Грузоподъемность</dt>
+                        </dl>
+                        <a class="btn btn-white choise__more" href="#">подробнее</a>
+                    </div>
+                    
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="choise__pagination swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="about-wr">
+            <div class="container">
+                <h2 class=" about__title with-wave heading">О компани</h2>
+                <div class="about">
+                    <div class="about__item about__item--left">
+                        <div class="inner-cont">
+                            <h3 class="heading">
+                                <span class="blue">
+                                    до <span class="cardName">3000 <sup class="heading">м2</sup> </span> 
+                                </span>
+                                <span class="extra-text">производственные <br>
+                                    помещения</span>
+                            </h3>
+                                <p>Компания APPARELBOATS –  основана в 2003 году
+                                    в городе Сургут и является дилером подвесных
+                                    лодочных моторов японских производителей.</p>
+                                <p>Изучив потребности регионов Российской Федерации,
+                                    в том числе Ханты-Мансийского автономного округа – Югры,
+                                    в 2015 г. компания APPARELBOATS принимает решение
+                                    о запуске производства скоростных грузопассажирских
+                                    глиссирующих лодок (катеров) аппарельного типа.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about__item about__item--right">
+                        <div class="inner-cont">
+                            <h3 class="heading">
+                                <span class="blue cardName">
+                                60 
+                                </span>
+                                <span class="extra-text">более <br>
+                                    катеров</span>
+                            </h3>
+                            <div class="inner-text">
+                                <p>
+                                    С начала своей деятельности компания  построила
+                                    уже более 60 катеров длиной от 7,5 до 14 метров.</p>
+    
+                                    <p>В 2020 году мы увеличили производственные помещения
+                                    до 1000 м2, для одновременной постройки четырёх судов.</p>
+    
+                                    <p>Наши Катера могут применяться не только в сферах туризма
+                                    и оказания транспортных услуг, но и для обеспечения безопасности
+                                    и контроля судоходства в сферах государственных служб.</p>
+    
+                                    <p>Имеющаяся в настоящее время на вооружении инспекторов
+                                    водно-моторная техника не имеет таких ёмкостных, скоростных
+                                    и манёвренных характеристик, как у Катеров аппарельного типа,
+                                    а потому не может обеспечить возможность привлечения
+                                    к ответственности большего процента числа нарушителей
+                                    на водных объектах.</p>
+    
+                                    <p>С таким судном, инспекторы по маломерным судам Центра ГИМС
+                                    МЧС будут на воде более маневренны и быстроходны.
+                                </p>
+                            </div>
+  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
+    <script src="./assets/scripts/slider/swiper-bundle.min.js"></script>
+    <script src="./assets/scripts/home.js"></script>
 </body>
 </html>

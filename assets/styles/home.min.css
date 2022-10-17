@@ -1,0 +1,409 @@
+.main-title {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal 400 36px / 42px "Bebas Neue Cyrillic", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .main-title {
+    text-transform: uppercase;
+    text-align: center;
+    font: normal normal 400 24px / 30px "Bebas Neue Cyrillic", sans-serif;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-wr {
+    height: 700px;
+    background: #D9D9D9 bottom center/cover url(../images/bg/hero.webp) no-repeat;
+  }
+}
+
+.main-title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 119px;
+  color: #ffffff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .main-title {
+    width: 531px;
+    top: 139px;
+    color: #333333;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-title br {
+    display: none;
+  }
+}
+
+.compas {
+  display: block;
+  margin: 0 auto 50px;
+}
+
+.bg-second {
+  background: #111023 url(../images/bg/second.jpg) top center/cover no-repeat;
+  padding: 35px 0;
+}
+@media screen and (max-width: 767px) {
+  .bg-second {
+    padding-top: 0;
+    background: #111023;
+  }
+}
+
+.choise-wr {
+  margin-bottom: 50px;
+}
+.choise__subtitle {
+  text-align: center;
+}
+.choise__slider {
+  margin: 83px auto 0;
+  max-width: 900px;
+}
+.choise__item {
+  min-height: 392px;
+  background: #111023;
+}
+.choise__item img {
+  width: 100%;
+  height: 100%;
+}
+.choise__more {
+  position: absolute;
+  right: 66px;
+  bottom: 57px;
+  width: 220px;
+}
+
+.item__title {
+  position: absolute;
+  top: 50px;
+  right: 150px;
+}
+.item__title .heading {
+  display: block;
+  text-align: left;
+  margin: 0 0 -10px 7px;
+}
+
+.item__descr {
+  position: absolute;
+  left: 48px;
+  top: 45px;
+}
+.item__descr dd {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal 400 14px / 14px "Bebas Neue Cyrillic", sans-serif;
+  margin-left: 0;
+  text-align: left;
+}
+.item__descr dd:nth-of-type(1)::before {
+  content: url(../images/icons/speed.png);
+  margin-right: 12px;
+}
+.item__descr dd:nth-of-type(2)::before {
+  content: url(../images/icons/people.png);
+  margin-right: 12px;
+}
+.item__descr dd:nth-of-type(3)::before {
+  content: url(../images/icons/anchor.png);
+  margin-right: 16px;
+}
+.item__descr .blue {
+  margin-right: 5px;
+}
+.item__descr dt {
+  color: #999999;
+  font: normal normal 500 14px / 17px "Montserrat", sans-serif;
+  margin-bottom: 33px;
+}
+
+@media screen and (max-width: 1023px) {
+  .choise__slider {
+    max-width: 688px;
+  }
+  .choise__item {
+    min-height: unset;
+    height: 300px;
+  }
+  .choise__more {
+    right: 26px;
+    bottom: 30px;
+  }
+  .item__title {
+    top: 40px;
+    right: 160px;
+  }
+  .item__title .cardName {
+    text-transform: uppercase;
+    text-align: center;
+    font: normal normal 400 60px / 60px "Bebas Neue Cyrillic", sans-serif;
+  }
+  .item__title .heading {
+    text-transform: uppercase;
+    text-align: center;
+    font: normal normal 400 24px / 30px "Bebas Neue Cyrillic", sans-serif;
+    text-align: left;
+    margin-bottom: -6px;
+  }
+  .item__descr {
+    left: 37px;
+    top: 33px;
+  }
+  .item__descr .blue {
+    text-transform: uppercase;
+    text-align: center;
+    font: normal normal 400 36px / 36px "Bebas Neue Cyrillic", sans-serif;
+  }
+}
+@media screen and (max-width: 767px) {
+  .choise-wr {
+    padding: 277px 0 40px;
+    background: #111023 url(../images/bg/hero-mob.jpg) bottom center/cover no-repeat;
+  }
+  .choise__slider {
+    max-width: 425px;
+    min-width: 220px;
+    width: 70%;
+    margin-top: 0;
+  }
+  .choise__item {
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .choise__item img:first-of-type {
+    display: none;
+  }
+  .choise__img--mob {
+    display: block !important;
+    height: auto !important;
+    margin: auto !important;
+  }
+  .choise__more {
+    position: static;
+    margin: auto auto 0;
+  }
+  .item__title {
+    top: 2%;
+    right: 10%;
+  }
+  .item__title .cardName {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .item__title .heading {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0;
+  }
+  .item__descr, .compas,
+.choise__title, .choise__subtitle {
+    display: none;
+  }
+}
+.about-wr {
+  overflow: hidden;
+  padding-bottom: 150px;
+}
+.about__item {
+  width: 50%;
+}
+.about__item p:not(:last-child) {
+  margin: 10px 0;
+}
+.about__item h3 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.about__item .extra-text {
+  font-size: 24px;
+  line-height: 24px;
+  display: inline-block;
+}
+.about__item--left {
+  margin: 130px 0 256px;
+}
+.about__item--left .inner-cont {
+  max-width: 438px;
+}
+.about__item--left sup {
+  position: absolute;
+  top: -10px;
+}
+.about__item--left::after {
+  content: "";
+  position: absolute;
+  width: 1218px;
+  height: 741px;
+  left: calc(100% + 15px);
+  top: calc(50% - 370.5px + 5px);
+  background: url(../images/decor/openedBoat.png) center/cover no-repeat;
+}
+.about__item--right {
+  margin-left: 50%;
+}
+.about__item--right .inner-cont {
+  max-width: 486px;
+  margin-left: 45px;
+}
+.about__item--right::before {
+  content: "";
+  position: absolute;
+  width: 941px;
+  height: 692px;
+  right: calc(100% + 15px);
+  top: calc(50% - 346px);
+  background: url(../images/decor/mapRussia.png) center/cover no-repeat;
+}
+
+@media screen and (max-width: 1023px) {
+  .about-wr {
+    padding-bottom: 100px;
+  }
+  .about__item {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .about__item::before, .about__item::after {
+    pointer-events: none;
+  }
+  .about__item--left {
+    margin: 74px 0 106px;
+  }
+  .about__item--left .inner-cont {
+    max-width: 438px;
+  }
+  .about__item--left::after {
+    width: 828px;
+    height: 503px;
+    top: calc(50% - 251.5px + 5px);
+  }
+  .about__item--right {
+    margin-left: 0;
+    width: 100%;
+  }
+  .about__item--right .inner-cont {
+    max-width: unset;
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about__item--right .inner-text, .about__item--right h3 {
+    width: 50%;
+  }
+  .about__item--right .inner-text {
+    max-width: 361px;
+  }
+  .about__item--right::before {
+    width: 565px;
+    height: 416px;
+    top: calc(50% - 208px + 5px);
+    right: calc(50% + 15px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-wr {
+    padding-bottom: 50px;
+  }
+  .about__title {
+    text-transform: uppercase;
+    text-align: center;
+    font: normal normal 400 24px / 24px "Bebas Neue Cyrillic", sans-serif;
+  }
+  .about__item {
+    width: 100%;
+  }
+  .about__item .extra-text {
+    display: block;
+  }
+  .about__item .heading {
+    text-align: center;
+  }
+  .about__item--left {
+    margin: 74px 0 30px;
+  }
+  .about__item--left .inner-cont {
+    max-width: 425px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__item--left .inner-cont p:first-of-type {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .about__item--left .heading {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .about__item--left h3 {
+    margin: 40px 0;
+  }
+  .about__item--left .cardName {
+    font-size: 36px;
+    line-height: 18px;
+  }
+  .about__item--left .extra-text {
+    margin-top: 14px;
+  }
+  .about__item--left::after {
+    display: none;
+  }
+  .about__item--left::before {
+    content: "";
+    display: block;
+    width: 85%;
+    padding-top: 45%;
+    margin: 0 auto 20px;
+    background: url(../images/decor/openedBoat-mob.png) center/cover no-repeat;
+  }
+  .about__item--right .inner-cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .about__item--right .inner-text, .about__item--right h3 {
+    width: 100%;
+    max-width: 425px;
+    margin: auto;
+  }
+  .about__item--right .inner-text {
+    margin-bottom: 50px;
+  }
+  .about__item--right::before {
+    position: relative;
+    display: block;
+    width: 95%;
+    height: unset;
+    padding-top: 68%;
+    right: 15px;
+    margin: 20px 0;
+  }
+}/*# sourceMappingURL=home.min.css.map */

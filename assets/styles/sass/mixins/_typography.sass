@@ -1,0 +1,21 @@
+@use 'media'
+
+// ********
+// * loop through the $types list,
+// * write interpolation for making class,
+// * include font mixin to set class content
+// ********
+$length: typography.$length
+$types: typography.$types
+$fonts: typography.$fonts
+
+@for $i from 0 to $length
+
+    #{'%'}#{nth($types, $i+1)}
+        @include typography.font(nth($fonts, $i + 1)... )
+        @if (str-index(to-lower-case(#{nth($types, $i+1)}), 'menu'))
+            text-transform: uppercase
+            letter-spacing: 0.2em
+        @if (nth($types, $i+1)== 'menuText' and ($i+1 != $length))
+            @include media.media-max(media.$md)
+                @include typography.font(nth($fonts, $length)... )

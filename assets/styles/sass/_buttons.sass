@@ -1,6 +1,5 @@
-@forward 'typography'
 @use 'vars'
-@import 'colors'
+@use 'colors'
 
 $br: 30px
 @mixin outline($color)
@@ -13,7 +12,7 @@ $br: 30px
 	border-radius: $br
 	background: linear-gradient(180deg, #FFFFFF 0%, #D1D1D1 100%)
 	box-shadow: vars.$shadow
-	color: $textBlack
+	color: colors.$textBlack
 	padding: 10px 27px
 	cursor: pointer
 	text-decoration: none
@@ -26,14 +25,14 @@ $br: 30px
 	&:hover, &:active
 		opacity: 0.8
 	&:focus
-		@include outline($cardBgLight)
+		@include outline(colors.$cardBgLight)
 
 	&--blue
 		background: linear-gradient(180deg, #49C4F9 0%, #8584FF 50%, #5F39FF 100%)
-		color: $textWhite
+		color: colors.$textWhite
 		min-width: 235px
 		&:focus 
-			@include outline($accentText)
+			@include outline(colors.$accentText)
 	&--pure
 		background: none
 		border: 1px solid

@@ -1,14 +1,45 @@
-@import 'buttons'
 @import 'vars'
+@import 'colors'
 @import 'media'
+@import 'typography'
+@import 'buttons'
+
+// typography classes
+// ********
+// * loop through the $types list,
+// * write interpolation for making class,
+// * include font mixin to set class content
+// ********
+$length: $length
+$types: $types
+$fonts: $fonts
+
+@for $i from 1 to $length
+    .#{nth($types, $i)}
+        @include font(nth($fonts, $i)... )
+        @if (str-index(to-lower-case(#{nth($types, $i)}), 'menu'))
+            text-transform: uppercase
+            letter-spacing: 0.2em
+        @if (nth($types, $i)== 'menuText' and ($i != $length))
+            @include media-max($md)
+                @include font(nth($fonts, $length)... )
+        @if (nth($types, $i) == 'subHeading')
+            @include media-max($md)
+                @include font(nth($fonts, 2)... )
+// end typography classes
 
 *, ::before, ::after
     box-sizing: border-box
     padding: 0
     margin: 0
+    position: relative
 
 body
     min-width: 320px
+    max-width: 1920px
+    margin: 0 auto
+    color: $textWhite
+    @extend %text
 .container
     min-width: 290px
     max-width: 1296px
@@ -36,6 +67,15 @@ body
     width: 1px
     white-space: nowrap
     font-size: 0
+
+.blue
+    color: $accentText
+.with-wave
+    position: relative
+    &::before
+        content: url(../images/icons/wave.svg)
+        display: block
+        margin: 40px auto 20px
 a
     text-decoration: none
     color: $accentText
@@ -145,6 +185,9 @@ ul
     .header
         &-wr
             background: $mobBg
+            position: fixed
+            z-index: 2
+            width: 100%
         &__logo
             margin-right: -22px
             &--all
@@ -166,4 +209,15 @@ ul
             @include justify-between
         .svg-icon
             fill: $textWhite
-        
+.swiper
+    padding-bottom: 50px 
+.swiper-pagination
+    line-height: 0
+.swiper-pagination-bullet
+    width: 14px
+    height: 14px
+    border: 1px solid $textWhite
+.swiper-pagination-bullet-active
+    background: $textWhite
+
+

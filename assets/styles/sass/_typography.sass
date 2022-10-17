@@ -1,5 +1,6 @@
 @use "sass:list"
-@import 'media'
+@use 'media'
+
 $bebas: ('Bebas Neue Cyrillic', sans-serif)
 $mont: ('Montserrat', sans-serif)
 
@@ -8,6 +9,7 @@ $mont: ('Montserrat', sans-serif)
     $weight: 400
     @if $family == $bebas
         text-transform: uppercase
+        text-align: center
     @else 
         $weight: 500
     font: normal normal $weight list.slash($size, $lh) $family  
@@ -15,7 +17,7 @@ $mont: ('Montserrat', sans-serif)
 // names
 $types: (heading, subHeading, cardHeading, cardName, text, secText, techText, menuText, mobMenuText)
 
-$fonts: ( (36px, 36px, $bebas), (24px, 30px, $bebas), (60px, 60px, $bebas), (90px, 90px, $bebas), (16px, 28px), (14px, 28px), (12px, 28px), (14px, 17px), (10px, 12px) )
+$fonts: ( (36px, 42px, $bebas), (24px, 30px, $bebas), (60px, 60px, $bebas), (90px, 90px, $bebas), (16px, 20px), (14px, 28px), (12px, 28px), (14px, 17px), (10px, 12px) )
 
 // ********
 // * loop through the $types list,
@@ -23,21 +25,16 @@ $fonts: ( (36px, 36px, $bebas), (24px, 30px, $bebas), (60px, 60px, $bebas), (90p
 // * include font mixin to set class content
 // ********
 $length: length($types)
-@for $i from 0 to $length
-    .#{nth($types, $i+1)}
-        @include font(nth($fonts, $i + 1)... )
-        @if (str-index(to-lower-case(#{nth($types, $i+1)}), 'menu'))
+@for $i from 1 to $length
+    $current: nth($types, $i)
+    #{'%'}#{$current}
+        @include font(nth($fonts, $i)... )
+        @if (str-index(to-lower-case(#{$current}), 'menu'))
             text-transform: uppercase
             letter-spacing: 0.2em
-        @if ( nth($types, $i+1) == 'menuText' and ( $i+1 != $length ) )
-            @include media-max($md)
+        @if ( $current == 'menuText' and ( $i != $length ) )
+            @include media.media-max(media.$md)
                 @include font(nth($fonts, $length)... )
-
-    #{'%'}#{nth($types, $i+1)}
-        @include font(nth($fonts, $i + 1)... )
-        @if (str-index(to-lower-case(#{nth($types, $i+1)}), 'menu'))
-            text-transform: uppercase
-            letter-spacing: 0.2em
-        @if (nth($types, $i+1)== 'menuText' and ($i+1 != $length))
-            @include media-max($md)
-                @include font(nth($fonts, $length)... )
+        @if ( $current == 'heading' and ( $i != $length ))
+            @include media-max($sm)
+                @include font(nth($fonts, 2)... )

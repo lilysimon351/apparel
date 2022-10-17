@@ -1,61 +1,31 @@
-.heading {
-  text-transform: uppercase;
-  font: normal normal 400 36px / 36px "Bebas Neue Cyrillic", sans-serif;
+.social__menu, .burger, .header__logo {
+  font-size: 0;
+  display: inline-block;
+}
+.social__menu img, .burger img, .header__logo img, .social__menu svg, .burger svg, .header__logo svg {
+  width: 100%;
+  height: auto;
 }
 
-.subHeading {
-  text-transform: uppercase;
-  font: normal normal 400 24px / 30px "Bebas Neue Cyrillic", sans-serif;
+.social__menu, .header__social, .header__menu, .header .logo-menu-wr, .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.cardHeading {
-  text-transform: uppercase;
-  font: normal normal 400 60px / 60px "Bebas Neue Cyrillic", sans-serif;
+body {
+  font: normal normal 500 16px / 20px "Montserrat", sans-serif;
 }
 
-.cardName {
-  text-transform: uppercase;
-  font: normal normal 400 90px / 90px "Bebas Neue Cyrillic", sans-serif;
-}
-
-.text {
-  font: normal normal 500 16px / 28px "Montserrat", sans-serif;
-}
-
-.secText {
-  font: normal normal 500 14px / 28px "Montserrat", sans-serif;
-}
-
-.techText {
-  font: normal normal 500 12px / 28px "Montserrat", sans-serif;
-}
-
-.menuText {
-  font: normal normal 500 14px / 17px "Montserrat", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
-
-@media screen and (max-width: 1024px) {
-  .menuText {
-    font: normal normal 500 10px / 12px "Montserrat", sans-serif;
-  }
-}
 .header__menu li, .btn {
   font: normal normal 500 14px / 17px "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .header__menu li, .btn {
     font: normal normal 500 10px / 12px "Montserrat", sans-serif;
   }
-}
-.mobMenuText {
-  font: normal normal 500 10px / 12px "Montserrat", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
 }
 
 .social__menu, .burger, .header__logo {
@@ -131,19 +101,58 @@
   outline: 2px solid inherit;
 }
 
-.social__menu, .burger, .header__logo {
-  font-size: 0;
-  display: inline-block;
-}
-.social__menu img, .burger img, .header__logo img, .social__menu svg, .burger svg, .header__logo svg {
-  width: 100%;
-  height: auto;
+.heading {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal 400 36px / 42px "Bebas Neue Cyrillic", sans-serif;
 }
 
-.social__menu, .header__social, .header__menu, .header .logo-menu-wr, .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.subHeading {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal 400 24px / 30px "Bebas Neue Cyrillic", sans-serif;
+}
+@media screen and (max-width: 1023px) {
+  .subHeading {
+    text-transform: uppercase;
+    text-align: center;
+    font: normal normal 400 24px / 30px "Bebas Neue Cyrillic", sans-serif;
+  }
+}
+
+.cardHeading {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal 400 60px / 60px "Bebas Neue Cyrillic", sans-serif;
+}
+
+.cardName {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal 400 90px / 90px "Bebas Neue Cyrillic", sans-serif;
+}
+
+.text {
+  font: normal normal 500 16px / 20px "Montserrat", sans-serif;
+}
+
+.secText {
+  font: normal normal 500 14px / 28px "Montserrat", sans-serif;
+}
+
+.techText {
+  font: normal normal 500 12px / 28px "Montserrat", sans-serif;
+}
+
+.menuText {
+  font: normal normal 500 14px / 17px "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+@media screen and (max-width: 1023px) {
+  .menuText {
+    font: normal normal 500 10px / 12px "Montserrat", sans-serif;
+  }
 }
 
 *, ::before, ::after {
@@ -151,10 +160,14 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 body {
   min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
+  color: #ffffff;
 }
 
 .container {
@@ -197,6 +210,19 @@ body {
   width: 1px;
   white-space: nowrap;
   font-size: 0;
+}
+
+.blue {
+  color: #009FE3;
+}
+
+.with-wave {
+  position: relative;
+}
+.with-wave::before {
+  content: url(../images/icons/wave.svg);
+  display: block;
+  margin: 40px auto 20px;
 }
 
 a {
@@ -272,7 +298,7 @@ ul {
   margin-right: 16px;
 }
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1319px) {
   .header .logo-menu-wr {
     margin-right: 6%;
   }
@@ -291,7 +317,7 @@ ul {
     margin-right: 26px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .header__logo {
     margin-left: 11px;
   }
@@ -336,9 +362,12 @@ ul {
     margin-right: 11px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-wr {
     background: #111023;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
   }
   .header__logo {
     margin-right: -22px;
@@ -372,4 +401,21 @@ ul {
   .header .svg-icon {
     fill: #ffffff;
   }
+}
+.swiper {
+  padding-bottom: 50px;
+}
+
+.swiper-pagination {
+  line-height: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff;
 }/*# sourceMappingURL=mainCSS.min.css.map */
