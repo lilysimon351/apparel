@@ -35,7 +35,7 @@ $fonts: $fonts
     position: relative
 
 body
-    min-width: 320px
+    min-width: 300px
     max-width: 1920px
     margin: 0 auto
     color: $textWhite
@@ -70,21 +70,30 @@ body
 
 .blue
     color: $accentText
+.black
+    color: $textBlack
 .with-wave
     position: relative
     &::before
         content: url(../images/icons/wave.svg)
         display: block
-        margin: 40px auto 20px
+        margin: 0 auto 20px
+        padding-top: 40px
+.tac
+    text-align: center
+.wavy-bg
+
 a
     text-decoration: none
     color: $accentText
 ul
     list-style: none
-    
+section
+    overflow: hidden
+
 .header
     @extend %flex
-    justify-content: space-between
+    @extend %justify-between
     align-items: center
     height: 100px
     .logo-menu-wr
@@ -217,7 +226,11 @@ ul
     width: 14px
     height: 14px
     border: 1px solid $textWhite
+    background: none
 .swiper-pagination-bullet-active
     background: $textWhite
 
-
+.swiper-pagination--black .swiper-pagination-bullet
+    border: 1px solid $textBlack
+.swiper-pagination--black .swiper-pagination-bullet-active
+    background: $textBlack

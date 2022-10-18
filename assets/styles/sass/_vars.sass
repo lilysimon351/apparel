@@ -1,4 +1,5 @@
 $shadow: 10px 10px 30px rgba(0, 0, 0, 0.05)
+$shadow-small: 10px 10px 20px rgba(0, 0, 0, 0.05)
 $mob-max-cont: 425px
 
 %img-holder
@@ -9,5 +10,11 @@ $mob-max-cont: 425px
         height: auto
 %flex
     display: flex
+%flex-wrap
+    flex-wrap: wrap
+%justify-between
+    justify-content: space-between
+%justify-center
+    justify-content: center
 @mixin justify-between
     justify-content: space-between
