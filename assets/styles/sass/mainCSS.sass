@@ -91,6 +91,61 @@ ul
 section
     overflow: hidden
 
+/* cols */
+
+.cols
+    @extend %flex
+    color: $textBlack
+    @include media-max($md)
+        display: block
+    p:not(:last-child)
+        margin: 12px 0
+    &__title
+        @include font(24px, 28px, $bebas)
+        color: $textBlack
+        text-align: left
+        margin-bottom: 35px
+        @include media-max($sm)
+            margin-bottom: 20px
+    .col-half
+        @include media-min($lg)
+            width: calc(50% - 98px/2)
+
+            &:first-of-type
+                padding-left: 29px
+                margin-right: 98px
+        @include media-min($md)
+            width: calc(50% - 65px/2)
+            &:first-of-type
+                padding-left: 0
+                margin-right: 65px
+        @include media-max($md)
+            width: 100%
+            &:first-of-type
+                margin-right: 0
+                max-width: 435px
+                margin: 0 auto 60px
+                @include media-max($xs)
+                    margin-bottom: 50px
+    .img-wr
+        @extend %rounded
+        width: 570px
+        box-shadow: $shadow
+        font-size: 0
+        line-height: 0
+        @include media-max($lg)
+            width: 100%
+        img
+            @extend  %rounded
+            width: 100%
+            height: auto
+    .cont-wr:not(:last-of-type)
+        margin-bottom: 70px
+        @include media-max($sm)
+            margin-bottom: 50px
+
+/* cols */
+
 .header
     @extend %flex
     @extend %justify-between

@@ -592,6 +592,8 @@ $margin: 22px
             cursor: pointer
             &:hover
                 opacity: 0.8
+    .cols__title
+        margin-bottom: 0
     &__more
         margin-top: 20px
         min-width: unset
@@ -605,7 +607,8 @@ $margin: 22px
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
-@include media-max($sm)
+    
+@include media-max($md)
     .videos
         .col-half:nth-child(2)
             max-width: 435px
@@ -616,46 +619,57 @@ $margin: 22px
                 text-align: center
                 br
                     display: none
-.cols
-    @extend %flex
-    @include media-max($sm)
-        display: block
-    &__title
-        @include font(24px, 28px, $bebas)
-        color: $textBlack
-        text-align: left
-    .col-half
-        width: calc(50% - 98px/2)
-        &:first-of-type
-            padding-left: 29px
-            margin-right: 98px
-        @include media-max($lg)
-            width: calc(50% - 65px/2)
-            &:first-of-type
-                padding-left: 0
-                margin-right: 65px
-        @include media-max($sm)
-            width: 100%
-            &:first-of-type
-                margin-right: 0
-                max-width: 435px
-                margin: 0 auto 60px
-                @include media-max($xs)
-                    margin-bottom: 50px
-    .img-wr
-        @extend %rounded
-        width: 570px
-        @include media-max($lg)
-            width: 100%
-        img
-            @extend  %rounded
-            width: 100%
-            height: auto
-
 
 // _____________ END VIDEOS _____________
-// _____________ PRODUCER _____________
-// _____________ END PRODUCER _____________
+
+// _____________ WHERE _____________
+.where-wr
+    background: $bg
+.where
+    margin-bottom: 80px
+    &__list
+        @extend %flex
+        @extend %justify-center
+        margin: 67px auto 113px
+        overflow: hidden
+    &__item
+        @extend %flex
+        @extend %align-center
+        @include font(24px, 28px, $bebas)
+        color: $textBlack
+        margin: 0 (90/2 + px )
+        text-align: left
+        .svg-icon
+            margin-right: 20px
+            fill: $accentText
+            vertical-align: middle
+
+@include media-max($md)
+    .where
+        &__list
+            flex-wrap: wrap
+            margin: 70px 0 60px
+        &__item
+            margin: 0 ( 78px/2) 35px
+            text-align: center
+            display: block
+            &:last-child
+                margin-bottom: 0
+                width: 100%
+            &:nth-child(3)
+                .svg-icon
+                    width: 54px
+                    height: 54px
+            br
+                display: none
+            .svg-icon
+                display: block
+                margin: 0 auto 20px
+@include media-max($sm)
+    .where
+        margin-bottom: 20px
+// _____________ END WHERE _____________
+
 // _____________ PRODUCER _____________
 // _____________ END PRODUCER _____________
 // _____________ PRODUCER _____________
