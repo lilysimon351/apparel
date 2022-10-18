@@ -51,13 +51,11 @@
     &__item
         min-height: 392px
         background: $mobBg
-        border-radius: 10px
-        overflow: hidden
+        @extend %rounded
         img
             width: 100%
             height: 100%
-            border-radius: 10px
-            overflow: hidden
+            @extend %rounded
 
     &__more
         position: absolute
@@ -335,8 +333,7 @@ $margin: 22px
         width: 100%
     
     &__card
-        border-radius: 10px
-        overflow: hidden
+        @extend %rounded
         box-shadow: $shadow
         max-width: 420px
         width: calc(100% / 3 - $margin*2)
@@ -347,7 +344,7 @@ $margin: 22px
         position: absolute
         width: 100%
         height: 100%
-        border-radius: 10px
+        @extend %rounded
 
     &__bottom
         @extend %flex
@@ -456,8 +453,7 @@ $margin: 22px
         width: $width
         height: 240px
         margin: 0 auto
-        border-radius: 10px
-        overflow: hidden
+        @extend %rounded
         box-shadow: $shadow-small
         display: flex
         transition: background-image 0.2s ease-out
@@ -467,7 +463,7 @@ $margin: 22px
             height: 232px
 
     &__logo
-        border-radius: 10px
+        @extend %rounded
         margin: auto
 
 
@@ -578,8 +574,86 @@ $margin: 22px
 
 // _____________ END USAGE _____________
 
-// _____________ PRODUCER _____________
-// _____________ END PRODUCER _____________
+// _____________ VIDEOS _____________
+.videos-wr
+    padding: 80px 0 70px
+    background: $bg
+    @include media-max($lg)
+        padding: 124px 0 60px
+    @include media-max($sm)
+        padding: 80px 0 40px
+.videos
+    align-items: center
+    &__box
+        .svg-icon
+            display: block
+            fill: $textWhite
+            margin: 0 auto 18px
+            cursor: pointer
+            &:hover
+                opacity: 0.8
+    &__more
+        margin-top: 20px
+        min-width: unset
+        width: 200px
+        .svg-icon
+            fill: $textWhite
+            margin-left: 10px
+    &__play-text
+        color: $textWhite
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+@include media-max($sm)
+    .videos
+        .col-half:nth-child(2)
+            max-width: 435px
+            text-align: center
+            margin-left: auto
+            margin-right: auto
+            .cols__title
+                text-align: center
+                br
+                    display: none
+.cols
+    @extend %flex
+    @include media-max($sm)
+        display: block
+    &__title
+        @include font(24px, 28px, $bebas)
+        color: $textBlack
+        text-align: left
+    .col-half
+        width: calc(50% - 98px/2)
+        &:first-of-type
+            padding-left: 29px
+            margin-right: 98px
+        @include media-max($lg)
+            width: calc(50% - 65px/2)
+            &:first-of-type
+                padding-left: 0
+                margin-right: 65px
+        @include media-max($sm)
+            width: 100%
+            &:first-of-type
+                margin-right: 0
+                max-width: 435px
+                margin: 0 auto 60px
+                @include media-max($xs)
+                    margin-bottom: 50px
+    .img-wr
+        @extend %rounded
+        width: 570px
+        @include media-max($lg)
+            width: 100%
+        img
+            @extend  %rounded
+            width: 100%
+            height: auto
+
+
+// _____________ END VIDEOS _____________
 // _____________ PRODUCER _____________
 // _____________ END PRODUCER _____________
 // _____________ PRODUCER _____________
