@@ -16,12 +16,14 @@ $br: 30px
 	padding: 10px 27px
 	cursor: pointer
 	text-decoration: none
-	text-align: center
 	display: inline-flex
 	justify-content: center
 	align-items: center
 	transition: all 0.3s
-	@extend %menuText
+	@include font(14px, 17px)
+	text-align: center
+	letter-spacing: 0.2em
+	text-transform: uppercase
 	&:hover, &:active
 		opacity: 0.8
 	&:focus

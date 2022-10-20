@@ -11,11 +11,11 @@ new Swiper('.choise__slider', {
 
 });
 
-let catalogSwiper;
+let catalogSwiper, gallerySwiper;
 let init = false;
 function swiperMode() {
   let mobile = window.matchMedia("(max-width: 767px)");
-    console.log("DFS")
+  
   if (mobile.matches) {
     if (!init) {
       init = true;
@@ -30,7 +30,18 @@ function swiperMode() {
           el: '.catalog__pagination',
           clickable: true
         },
-    
+    });
+    gallerySwiper = new Swiper('.gallery__slider', {
+        // Optional parameters
+        centeredSlides: true,
+        loop: true,
+        spaceBetween: 40,
+        
+        // If we need pagination
+        pagination: {
+          el: '.gallery__pagination',
+          clickable: true
+        },
     });
     }
   } else {

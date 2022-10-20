@@ -82,6 +82,9 @@ body
 .tac
     text-align: center
 .wavy-bg
+    background: $mobBg url(../images/bg/wavy.jpg) top center / cover no-repeat
+    @include media-max($sm)
+        background: $mobBg url(../images/bg/wavy-mob.jpg) top center / cover no-repeat
 
 a
     text-decoration: none
@@ -133,6 +136,7 @@ section
         box-shadow: $shadow
         font-size: 0
         line-height: 0
+        margin-left: auto
         @include media-max($lg)
             width: 100%
         img
@@ -157,7 +161,6 @@ section
         margin-right: 54px
     &__logo
         display: block
-        margin-left: 38px
         @extend %img-holder
         img
             width: 130px
@@ -174,7 +177,7 @@ section
             color: $textBlack
             transition: all 0.3s
             &:hover
-                text-shadow: 1px 1px 4px rgb(0 0 0 / 60%)
+                color: $accentText
                 
     &__phone
         margin-right: 25px
@@ -190,7 +193,8 @@ section
 
 .burger
     @extend %img-holder
-
+    @include media-min($sm)
+        display: none
 .social
     &__menu
         @extend %img-holder
@@ -220,8 +224,6 @@ section
 
 @include media-max($md)
     .header
-        &__logo
-            margin-left: 11px
         &__menu
             li
                 margin: 6.5px 25px
@@ -243,6 +245,7 @@ section
     .social
         &__menu-item
             width: 22px
+            height: 22px
             &:first-child
                 margin-right: 11px
 @include media-max($sm)
@@ -253,7 +256,7 @@ section
             z-index: 2
             width: 100%
         &__logo
-            margin-right: -22px
+            
             &--all
                 display: none
             &--mob 
