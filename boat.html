@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparel</title>
+    <link rel="stylesheet" href="./assets/fonts/BebasNeueCyrillic/style.css">
+    <link rel="stylesheet" href="./assets/fonts/MontserratMedium/style.css">
+    <link rel="stylesheet" href="./assets/scripts/slider/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/styles/mainCSS.min.css">
+    <link rel="stylesheet" href="./assets/styles/article.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <!-- __________ HEADER __________ -->
+    <div class="header-wr">
+        <div class="container">
+            <header class="header header--white">
+                <div class="logo-menu-wr">
+                    <div class="burger" tabindex="1">
+                        <span class="sr-only">Показать/скрыть меню</span>
+                        <svg class="svg-icon burger__icon" width="24" height="14"> 
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#menu" />
+                        </svg>
+                        <svg class="svg-icon menu-close" width="24" height="24"> 
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#close" />
+                        </svg>
+                    </div>
+                    <a href="/" class="header__logo">
+                        <span class="sr-only">Apparel Boats</span>
+                        <svg class="svg-icon header__logo--all" width="130" height="44"> 
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#logo" />
+                        </svg>
+                        <svg class="svg-icon header__logo--mob" width="47" height="61"> 
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#logo-vertical" />
+                        </svg>
+                    </a>
+                </div>
+                <ul class="header__menu">
+                    <li><a href="#">о нас</a></li>
+                    <li><a href="#">модели</a></li>
+                    <li><a href="#">галерея</a></li>
+                    <li><a href="#">экспедиции</a></li>
+                    <li><a href="#">лодка от производителя</a></li>
+                    <li><a href="#">контакты</a></li>
+                </ul>
+                <div class="header__social">
+                    <a href="tel:+79226531847" class="btn btn--pure header__phone menuText">+7(922) 653-18-47</a>
+                    <br />
+                    <a class="header__phone menuText" href="tel:+7(3462) 45-11-01">+7(3462) 45-11-01</a>
+                    <br />
+                    <a class="header__phone menuText" href="tel:+7(904) 472-45-77">+7(904) 472-45-77</a>
+                    <div class="social__menu">
+                        <a class="social__menu-item" href="instagram.com" target="_blank">
+                            <span class="sr-only">Инстаграм канал</span>
+                            <svg class="svg-icon" width="32" height="32"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#insta" />
+                            </svg>
+                        </a>
+                        <a class="social__menu-item" href="youtube.com" target="_blank">
+                            <span class="sr-only">Ютуб канал</span>
+                            <svg class="svg-icon" width="32" height="32"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#yt" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__info">
+                    <div class="header__mails">
+                        <a href="mailto:motor@rocotmoto.ru">motor@rocotmoto.ru</a>
+                        <br />
+                        <a href="mailto:sa@rocotmoto.ru">sa@rocotmoto.ru</a>
+                    </div>
+                    <div class="header__address">
+                        ХМАО-ЮГРА г. Сургут, <br>
+                        Нефтеюганское шоссе,
+                        46/1, 628406
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <script>
+        let burger = document.querySelector('.burger');
+        let opened = false;
+        burger?.addEventListener('click', function() {
+            if(!opened) {
+                opened = true;
+                document.querySelector('.header-wr').classList.add('header--opened')
+            } else {
+                opened = false;
+                document.querySelector('.header--opened').classList.remove('header--opened')
+            }
+        })
+    </script>
+    <!-- __________ END HEADER __________ -->
+
+    
+    <article class="page">
+        <section class="page__top-wr">
+            <div class="container">
+                <div class="page__top">
+                    <div class="page__main">
+                        <div class="page__thumb">
+                            <img src="./assets/images/item1alfa.png" alt="apparel 1400 cabin pro max">
+                        </div>
+                        <div class="page__heading">
+                            <h1 class="page__title"> <span class="blue">   apparel 1400</span> cabin pro max</h1>
+                            <p class="heading-text">Катер с увеличенной носовой аппарелью
+                                адаптированный специально для морской
+                                акватории.</p>
+                            <span class="price">1.000.000 руб  </span>
+                        </div>
+                    </div>
+
+                    <div class="page__conf">
+                        <a class="to-conf btn btn--pure" href="#">конфигуратор</a>
+                        <a class="btn__buy btn" href="#">купить</a>
+                    </div>
+                    <div class="page__buy">
+                        <a class="btn" href="#">купить</a>    
+                        <span class="page__price price">1.000.000 руб</span>
+                    </div>
+                    <div class="page__character">
+                        <div class="char__block">
+                            <h2 class="char__title blue">Технические характеристики:</h2>
+                            <table class="char__table">
+                                <tr>
+                                    <th>Пасажировместимость</th>
+                                    <td>2 места</td>
+                                </tr>
+                                <tr>
+                                    <th>Осадка</th>
+                                    <td>0,42 м</td>
+                                </tr>
+                                <tr>
+                                    <th>Скорость</th>
+                                    <td>70 км/ч</td>
+                                </tr>
+                                <tr>
+                                    <th>Топливный бак</th>
+                                    <td>2*370 л</td>
+                                </tr>
+                                <tr style="height: 6px">
+                                    <td colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Материал корпуса</th>
+                                </tr>
+                                <tr>
+                                    <th class="with-line">Киль АМГ5</th>
+                                    <td>10 мм</td>
+                                </tr>
+                                <tr>
+                                    <th class="with-line">Днище, транец, усиление днища
+                                        катера в носовой АМГ5</th>
+                                    <td>6 мм</td>
+                                </tr>
+                                <tr>
+                                    <th class="with-line">Силовой набор катера, борт АМГ5</th>
+                                    <td>5 мм</td>
+                                </tr>
+                                <tr>
+                                    <th class="with-line">Палуба АМГ5</th>
+                                    <td>4 мм</td>
+                                </tr>
+                                <tr>
+                                    <th class="with-line">Рубка АМГ5</th>
+                                    <td>3,4 мм</td>
+                                </tr>
+                                <tr style="height: 6px">
+                                    <td colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <th>Мощность</th>
+                                    <td>600 - 900 л.с</td>
+                                </tr>
+                                <tr>
+                                    <th class="with-line">Тип двигателя</th>
+                                    <td>подвесной</td>
+                                </tr>
+                                <tr>
+                                    <th>Вес</th>
+                                    <td>4,1 т</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Габаритные размеры</th>
+                                </tr>
+                                <tr>
+                                    <th class="with-line">Ширина/Длина/высота</th>
+                                    <td>3450/13420/3860</td>
+                                </tr>
+                                <tr>
+                                    <th>Грузоподъемность</th>
+                                    <td>5 т</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="page__descr-wr">
+            <div class="container">
+                <h2 class="descr__title heading with-wave">описание</h2>
+                <div class="page__descr">
+                    <div class="left">
+                        <p>Нужен надежный катер, чтобы быстро доставлять грузы по воде?
+                            Грузовой катер аппарельного типа «Фактория 1400» — лучший вариант.
+                            Это не только катер для путешествий, но и настоящее судно
+                            для скорой доставки грузов и техники в места,
+                            куда обычным способом добраться очень сложно.
+                            Область применения судна весьма разнообразна:
+                            </p>
+                            <span>  это помощь при чрезвычайных ситуациях</span>
+                            <ul>
+                                <li>грузоперевозки для нефтяного и газовых месторождений</li>
+                                <li>транспортная логистика</li>
+                                <li>контроль судоходства</li>
+                                <li>паромная переправа</li>
+                                <li>рыболовство, туризм и тд.</li>
+                            </ul>
+                            <p>
+                                Катер позволяет грузить и выгружать технику и грузы
+                                в местах с не оборудованным берегом.
+                                Конструкция носовой откидной аппарели позволяет
+                                загружать плавающую вездеходную технику прямо из воды.
+                                Грузовая платформа размером 12 x 3,5 метра вмещает груз весом
+                                до 5 т и позволяет перевезти несколько квадроциклов,
+                                два болотохода типа «Шерп» и даже монстра вездеходной
+                                техники – «ТРОМ 8».
+    
+                            </p>
+                            <p>Носовая аппарель шириной до 2,95 метра удобна для погрузки
+                                техники своим ходом. Ширина корпуса этого катера позволяет
+                                перевозить плавсредство по автомобильным дорогам общего
+                                пользования с получением разрешения органов ГИБДД.
+                                Для удобства транспортировки катер имеет съёмную рубку,
+                                которая легко монтируется на свое штатное место
+                                в месте сброса катера в воду при помощи обычного крана.
+                                </p>
+                                <p>
+                                    Корпус судна имеет обводы глиссирующего типа,
+                                    форма корпуса-моногидрон с килеватостью 19 градусов,
+                                    а в качестве основного двигателя используется два
+                                    или три подвесных лодочных мотора общей мощностью
+                                    от 600 до 900 лс . Рекомендуемая мощность ПЛМ составляет 600 лс.
+                                    Максимальная скорость полностью заправленного катера
+                                    с нагрузкой 5 тонн под данными двигателями составляет до 70 км/час.
+    
+                                </p>
+                        <p>
+    
+                            Топливная система состоит из двух стационарных алюминиевых
+                            баков ёмкостью 400 литров каждый.
+                            Большое внимание уделено безопасности и непотопляемости.
+                            Корпус катера разделён на три независимых отсека двумя
+                            герметичными переборками, каждый отсек имеет свою аварийную
+                            систему осушения.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/images/article-cont.png" alt="">
+                        <p>
+                            Настил палубы носового грузового кокпита выполнен
+                            из листов рифлёного алюминия толщиной 5 мм,
+                            герметично приваренного к силовому набору, что обеспечивает
+                            ее полную герметичность. Дополнительно всё пространство
+                            под палубой и частично надводный борт заполнено блоками
+                            плавучести, позволяющим судну оставаться на плаву даже
+                            в полузатопленном состоянии. Толщина днищевого листа
+                            в районе киля и форштевня (зона касания днища катера
+                            с берегом) катера составляет 10 мм.
+    
+                        </p>
+                        <p>
+                            Пассажировместимость данной модели катера ограничена 12 чел.
+                            Район плавания – река, прибрежные морские воды,
+                            в соответствии с ТР ТС о «Безопасности маломерных судов» 4-2
+                            (волна 2 метра, удаленность от берега не более 12 морских миль).
+                            Судно имеет множество видов дополнительного оборудования,
+                            не вошедшего в базовую комплектацию, что может удовлетворить
+                            спрос любого будущего владельца.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="config-wr">
+            <div class="container">
+                <h2 class="config__title heading with-wave black">конфигуратор</h2>
+                <p class="config__subtitle black tac">Выберите подходящую модель</p>
+                <div class="config__box">
+                    <div class="config__btns btn">
+                        <div class="config__btn config__btn--base config__btn--active" data-tab="config__base">
+                            <svg class="svg-icon" width="20" height="21"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#base" />
+                            </svg>
+                            <span>БАЗОВАЯ КОМПЛЕКТАЦИЯ</span>
+                        </div>
+                        <div class="config__btn config__btn--extra" data-tab="config__extra">
+                            <svg class="svg-icon" width="49" height="26"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#boat" />
+                            </svg>
+                            <span>дополнительно</span>
+                        </div>
+                    </div>
+                    <div class="config">
+                        <div class="config__top">
+                            <div class="config__base config__tab config__tab--active swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">техника</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="21">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="22">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="203">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="204">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">техника</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="204">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">техника</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">техника</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">техника</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">техника</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>                      
+                            </div>
+                            <div class="config__extra config__tab swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">Интерьер</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">Интерьер</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">Интерьер</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">Интерьер</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">Интерьер</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="config__item swiper-slide">
+                                        <div class="config__item-title">Интерьер</div>
+                                        <div class="config__checkbox">
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>USB розетка – 2 шт, 2.1 и 3 А;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Панель предохранителей;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Стеклоочиститель стекла судоводителя;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Задний рундук с отсеками без крышек;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Входная дверь с замком;</span>
+                                            </label>
+                                            <label class="config__label">
+                                                <input type="checkbox" data-price="20">
+                                                <span>Пробка слива воды с заднего отсека;</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>               
+                            </div>
+                        </div>
+                        <div class="config__bottom">
+                            <div class="config__price">
+                                <span class="total">итого цена</span>
+                                <span class="price"><span class="amount" data-price-initial="1000000">1.000.000</span> руб</span>
+                            </div>
+                            <a class="config__price-btn btn" href="#">купить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            // change tab
+            let base = document.querySelector('.config__btn--base');
+            let extra = document.querySelector('.config__btn--extra');
+            function changeTab(e) {
+                let $this = e.currentTarget;
+                let activeBtnClassName = 'config__btn--active',
+                    activeTabClassName = 'config__tab--active';
+                if(!$this.classList.contains(activeBtnClassName)) {
+                    let prevActive = document.querySelector(`.${activeBtnClassName}`),
+                        prevTab = document.querySelector(`.${prevActive.dataset.tab}`) ,
+                        currTab = document.querySelector(`.${$this.dataset.tab}`);
+                    prevActive.classList.remove(activeBtnClassName);
+                    $this.classList.add(activeBtnClassName);
+                    prevTab.classList.remove(activeTabClassName);
+                    currTab.classList.add(activeTabClassName);
+                }
+            }   
+            base.addEventListener('click', changeTab)
+            extra.addEventListener('click', changeTab)
+
+            // change price
+            let priceCont = document.querySelector('.config__price .amount'),
+                initialPrice = parseInt(priceCont.dataset.priceInitial);
+            let checkboxCont = document.querySelector('.config__top')
+            checkboxCont.addEventListener('click', function(e) {
+                let target = e.target;
+                if(target.nodeName === 'INPUT') {
+                    let price = parseInt(target.dataset.price) || 0;
+
+                    if(target.checked) {
+                        initialPrice += price;
+                    } else {
+                        initialPrice -= price;
+                    }
+                    priceCont.innerText = initialPrice.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+                
+                }
+            });
+        </script>
+    </article>
+
+        <!-- __________ GALLERY __________ -->
+    <section class="gallery-wr wavy-bg">
+        <div class="container">
+            <h2 class="gallery__title heading with-wave">галерея</h2>
+            <div class="gallery">
+                <!-- Slider main container -->
+                <div class="gallery__slider swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                        <div class="gallery__item swiper-slide">
+                            <img src="./assets/images/gallery1.jpg" alt="apparel 750">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="gallery__pagination swiper-pagination"></div>
+                </div>
+
+            </div>
+            <div class="gallery__more-wr">
+                <a href="" class="gallery__more btn">еще фото</a>
+            </div>
+        </div>
+    </section>
+        <!-- __________ END GALLERY __________ -->
+
+        <!-- __________ OFFER __________ -->
+        <section class="offer-wr wavy-bg">
+            <div class="container">
+                <h2 class="offer__title heading with-wave">ЗАКАЗАТЬ РАСЧЕТ ЦЕНЫ</h2>
+                <div class="offer__form">
+                    <form action="" class="form">
+                        <h3 class="form__title heading blue">Давайте мы вам <br> позвоним</h3>
+                        <p class="form__subtitle black tac">Оставьте свой номер, <br> и мы перезвоним вам</p>
+                        <div class="form__input-wr">
+                            <input class="btn btn--pure form__input" type="text" placeholder="ваше имя">
+                            <input class="btn btn--pure form__input" type="text" placeholder="ваш телефон">
+                        </div>
+                        <div class="form__submit-wr">
+                            <input class="btn btn--blue" type="submit" value="отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- __________ END OFFER __________ -->
+
+        <!-- __________ FOOTER __________ -->
+        <footer class="footer-wr">
+            <div class="container">
+                <div class="footer">
+                    <a href="/" class="footer__logo">
+                        <span class="sr-only">Apparel Boats</span>
+                        <svg class="svg-icon" width="130" height="44"> 
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#logo" />
+                        </svg>
+                    </a>
+                    <div class="footer__social social__menu">
+                        <a class="social__menu-item" href="instagram.com" target="_blank">
+                            <span class="sr-only">Инстаграм канал</span>
+                            <svg class="svg-icon" width="32" height="32"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#insta" />
+                            </svg>
+                        </a>
+                        <a class="social__menu-item" href="youtube.com" target="_blank">
+                            <span class="sr-only">Ютуб канал</span>
+                            <svg class="svg-icon" width="34" height="35"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#yt" />
+                            </svg>
+                        </a>
+                    </div>
+                    <nav class="footer__menus">
+                        <ul class="footer__menu">
+                            <li><a href="">о нас</a></li>
+                            <li><a href="">модели</a></li>
+                            <li><a href="">галерея</a></li>
+                        </ul>
+                        <ul class="footer__menu">
+                            <li><a href="">экспедиции</a></li>
+                            <li><a href="">контакты</a></li>
+                            <li><a href="">лодка от производителя</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__info">
+                        <div class="footer__mails">
+                            <a href="mailto:motor@rocotmoto.ru">motor@rocotmoto.ru</a>
+                            <br />
+                            <a href="mailto:sa@rocotmoto.ru">sa@rocotmoto.ru</a>
+                        </div>
+                        <div class="footer__address">
+                            ХМАО-ЮГРА г. Сургут, <br>
+                            Нефтеюганское шоссе,
+                            46/1, 628406
+                        </div>
+                    </div>
+                    <div class="footer__phones">
+                        <a href="tel:79226531847">+7(922) 653-18-47</a>
+                        <br />
+                        <a href="tel:+7(3462) 45-11-01">+7(3462) 45-11-01</a>
+                        <br />
+                        <a href="tel:+7(904) 472-45-77">+7(904) 472-45-77</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- __________ END FOOTER __________ -->
+
+    <script src="./assets/scripts/slider/swiper-bundle.min.js"></script>
+    <script src="./assets/scripts/home.js"></script>
+</body>
+</html>

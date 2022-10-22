@@ -1,0 +1,370 @@
+@import 'vars'
+@import 'colors'
+@import 'media'
+@import 'typography'
+$gap: 46px
+$char-width: 450px
+
+.with-line
+    color: $secText
+    &::before
+        content: "—\00a0"
+        vertical-align: middle
+.header-wr
+    background-color: transparent
+    background: $mobBg  url(../images/bg/article.jpg) top center / cover no-repeat
+.page
+    color: $textWhite
+    overflow: hidden
+    img
+        max-width: 550px
+        width: 100%
+    &__top-wr
+
+        &::before
+            content: ""
+            width: 100%
+            height: calc(100% + 100px)
+            background: $mobBg  url(../images/bg/article.jpg) top center / cover no-repeat
+            position: absolute
+            top: -100px
+            left: 0
+    &__top
+        display: grid
+        grid-template-areas: "img char" "conf buy"
+        padding: 40px 0
+    &__main
+        grid-area: img
+    &__thumb
+        max-width: 750px
+        img
+            max-width: unset
+    &__title
+        @include font(36px, 42px, $bebas)
+        text-align: left
+    &__heading
+        position: absolute
+        max-width: $mob-max-cont
+        top: 0
+        left: 50%
+        .heading-text
+
+        .price
+            display: none
+    &__conf
+        grid-area: conf
+    .btn__buy
+        @include media-min($lg)
+            display: none
+    &__buy
+        grid-area: buy
+        @extend %flex
+        @extend %justify-between
+        @extend %align-center
+    &__price
+
+    &__character
+        grid-area: char
+    &__bottom
+.price
+    @include font(36px, 36px, $bebas)
+    color: $accentText
+.char__block, .page__buy
+    max-width: $char-width
+    width: 100%
+    margin-left: auto
+.char
+    &__block
+        padding: 30px 33px
+        background: $mobBg url(../images/bg/character.png) top left / 100% 100% no-repeat
+        color: $textWhite
+        @extend %rounded
+        @include font(12px, 18px)
+        margin-bottom: 75px
+    &__table
+        width: 100%
+        th
+            text-align: left
+            font-weight: 400
+            width: 246px
+            padding-right: 10px
+        td
+            text-align: right
+            vertical-align: bottom
+            padding-left: 10px
+    &__title
+        @include font(18px, 20px, $bebas)
+        margin-bottom: 10px
+        text-align: left
+
+@include media-max($lg)
+
+    .page
+        &__top-wr
+
+            &::before
+                background: $mobBg  url(../images/bg/article.jpg) top center / cover no-repeat
+        &__top
+            grid-template-areas: "img" "conf" "char" "buy"
+            justify-content: center
+        &__heading
+            .price
+                display: block
+                text-align: left
+                margin-top: 10px
+        &__conf
+            text-align: center
+            margin-top: 30px
+        &__buy
+            flex-direction: row-reverse
+
+        .to-conf
+            margin-right: 50px
+
+
+    .char__block, .page__buy
+        margin-right: auto
+    .char
+        &__block
+            margin: 87px auto 27px
+
+@include media-max($sm)
+    .page
+
+        &__top
+            padding: 20px 0 0
+            display: block
+        &__thumb
+            max-width: $mob-max-cont
+            margin: 10px auto
+        &__heading
+            position: static
+            max-width: unset
+            .heading-text, .price
+                display: none
+        &__title
+            @include font(24px, 30px, $bebas)
+
+        &__conf
+            display: flex
+            flex-direction: column-reverse
+            margin: 10px auto 0
+            width: 244px
+        .to-conf, .btn__buy
+            margin: 10px 0
+            max-width: 100%
+        &__buy
+            display: none
+        &__character
+            margin: 37px -15px 0
+    .char
+        &__block
+            margin: 0 auto
+            background: $bg
+            color: $textBlack
+            border-radius: 0
+            padding: 32px 15px 43px
+            @include font(11px, 16px)
+
+.page
+    &__descr-wr
+        background: $mobBg url(../images/bg/content.jpg) top left / cover no-repeat
+    &__descr
+        @extend %flex
+        padding-bottom: 200px
+        margin-top: 60px
+        img
+            margin: 20px 0
+            @extend %rounded
+        p
+            margin: 20px 0
+        ul
+            color: $secText
+            li::before
+                content: "—\00a0"
+                vertical-align: middle 
+
+        .left
+            width: 50%
+            padding-right: $gap
+        .right
+            width: 50%
+            padding-left: $gap
+
+@include media-max($lg)
+    .page
+        &__descr
+            display: block
+            max-width: 831px
+            padding-bottom: 60px
+            .left, .right
+                width: 100%
+                padding: 0
+            img
+                display: block
+                margin: 40px auto
+    .descr__title
+        height: 0
+        overflow: hidden
+
+.config-wr
+    background: $bg
+    padding: 30px 0 100px
+    color: $textWhite
+.config
+    padding: 50px
+    margin-top: 100px
+    background: $mobBg url(../images/bg/config.jpg) center / cover no-repeat
+    @extend %rounded
+    &::before
+        $offset: 10px
+        content: ""
+        width: calc( 100% - $offset*2 )
+        height: calc( 100% - $offset*2 )
+        border: 1px solid $textWhite
+        border-radius: 10px
+        position: absolute
+        top: $offset
+        left: $offset
+        
+    &__btns
+        @include font(14px, 17px)
+        letter-spacing: 0.2em
+        cursor: initial
+        position: absolute
+        top: calc(-55px /2)
+        left: 50%
+        transform: translateX(-50%) 
+        z-index: 1
+        .svg-icon
+            margin-right: 10px
+        &:hover
+            opacity: 1
+    &__btn
+        @extend %flex
+        @extend %align-center
+        cursor: pointer
+        white-space: nowrap
+        &:first-of-type
+            &::after
+                content: ""
+                width: 1px
+                height: 32px
+                margin: 0 22px
+                background-color: $secText  
+    &__btn:hover,  &__btn--active 
+        color: $accentText
+    &__btn:hover .svg-icon, &__btn--active .svg-icon
+        fill: $accentText
+        
+    &__tab
+        display: none
+        padding-bottom: 0
+    &__tab--active
+        display: block
+    &__tab--active .swiper-wrapper 
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 39px 27px
+    &__item
+    &__item-title
+        color: $accentText
+        @include font(18px, 18px, $bebas)
+        text-align: left
+        margin-bottom: 20px
+    &__label
+        display: block
+        input, span
+            pointer-events: none
+        input
+            appearance: none
+        span
+            padding-left: 22px
+            &::before
+                content: ""
+                width: 10px
+                height: 10px
+                border: 1px solid $textWhite
+                position: absolute
+                top: 4px
+                left: 0
+            &::after
+                content: ""
+                position: absolute
+                width: 6px
+                height: 6px
+                top: 6px
+                left: 2px
+                border: 1px solid $accentText
+                border-radius: 50%
+                display: none
+        input:checked + span::before
+            border-color: $accentText
+        input:checked + span::after
+            display: block
+        
+    &__bottom
+        text-align: center
+        margin-top: 36px
+    &__price
+        position: absolute
+        bottom: 10px
+        left: calc(68% + 5px)
+        .total
+            color: $secText
+            @include font(18px, 18px, $bebas)
+            margin-right: 10px
+
+@include media-max($lg)
+    .config
+        max-width: 900px
+        margin-left: auto
+        margin-right: auto
+        &__tab--active .swiper-wrapper 
+            grid-template-columns: repeat(2, 1fr)
+        &__price
+            left: 0
+            .total
+                display: block
+                text-align: left
+                margin-bottom: 5px
+@include media-max($md)
+    .config
+        padding: 50px 30px
+        &__price
+            position: static
+            margin-bottom: 30px
+            .total
+                text-align: center
+                margin-bottom: 5px
+//
+.config
+    &__box
+
+    &__btns
+
+    &__top
+
+    &__base
+
+    &__item
+
+    &__checkbox
+
+    &__label
+
+    &__extra
+
+    &__bottom
+
+    &__btn
+
+    &__price
+
+        .svg-icon
+
+        .total
+
+        .blue
+
+        .price 
