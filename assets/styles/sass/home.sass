@@ -287,10 +287,11 @@
             &::before
                 content: ""
                 display: block
-                width: 85%
-                padding-top: 45%
+                width: 95%
+                padding-top: 35%
                 margin: 0 auto 20px
-                background: url(../images/decor/openedBoat-mob.png) center / cover no-repeat
+                background: url(../images/decor/openedBoat-mob.png) bottom center / contain no-repeat
+                max-width: $mob-max-cont
 
         &__item--right
             
@@ -305,11 +306,12 @@
             &::before
                 position: relative
                 display: block
-                width: 95%
+                width: 75%
                 height: unset
-                padding-top: 68%
+                padding-top: 60%
                 right: 15px
                 margin: 20px 0
+                background: url(../images/decor/mapRussia.png)  center/auto 100%  no-repeat
 
 // _____________ END ABOUT _____________
 
@@ -721,6 +723,9 @@ $margin: 22px
             height: 189px
             width: 290px
             overflow: hidden
+@include media-min($sm)
+    .gallery__pagination
+        display: none
 // _____________ END GALLERY _____________
 
 // _____________ DESIGN _____________

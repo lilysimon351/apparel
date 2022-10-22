@@ -14,16 +14,19 @@
 </head>
 <body>
     <!-- __________ HEADER __________ -->
-    <div class="header-wr">
+    <div class="header-wr header--opened">
         <div class="container">
             <header class="header">
                 <div class="logo-menu-wr">
-                    <div class="burger">
+                    <div class="burger" tabindex="1">
+                        <span class="sr-only">Показать/скрыть меню</span>
                         <svg class="svg-icon burger__icon" width="24" height="14"> 
                             <use xlink:href="./assets/images/icons/iconsSprite.svg#menu" />
                         </svg>
+                        <svg class="svg-icon menu-close" width="24" height="24"> 
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#close" />
+                        </svg>
                     </div>
-                    
                     <a href="/" class="header__logo">
                         <span class="sr-only">Apparel Boats</span>
                         <svg class="svg-icon header__logo--all" width="130" height="44"> 
@@ -39,10 +42,15 @@
                     <li><a href="#">модели</a></li>
                     <li><a href="#">галерея</a></li>
                     <li><a href="#">экспедиции</a></li>
+                    <li><a href="#">лодка от производителя</a></li>
                     <li><a href="#">контакты</a></li>
                 </ul>
                 <div class="header__social">
                     <a href="tel:+79226531847" class="btn btn--pure header__phone menuText">+7(922) 653-18-47</a>
+                    <br />
+                    <a class="header__phone menuText" href="tel:+7(3462) 45-11-01">+7(3462) 45-11-01</a>
+                    <br />
+                    <a class="header__phone menuText" href="tel:+7(904) 472-45-77">+7(904) 472-45-77</a>
                     <div class="social__menu">
                         <a class="social__menu-item" href="instagram.com" target="_blank">
                             <span class="sr-only">Инстаграм канал</span>
@@ -58,9 +66,34 @@
                         </a>
                     </div>
                 </div>
+                <div class="header__info">
+                    <div class="header__mails">
+                        <a href="mailto:motor@rocotmoto.ru">motor@rocotmoto.ru</a>
+                        <br />
+                        <a href="mailto:sa@rocotmoto.ru">sa@rocotmoto.ru</a>
+                    </div>
+                    <div class="header__address">
+                        ХМАО-ЮГРА г. Сургут, <br>
+                        Нефтеюганское шоссе,
+                        46/1, 628406
+                    </div>
+                </div>
             </header>
         </div>
     </div>
+    <script>
+        let burger = document.querySelector('.burger');
+        let opened = false;
+        burger?.addEventListener('click', function() {
+            if(!opened) {
+                opened = true;
+                document.querySelector('.header-wr').classList.add('header--opened')
+            } else {
+                opened = false;
+                document.querySelector('.header--opened').classList.remove('header--opened')
+            }
+        })
+    </script>
     <!-- __________ END HEADER __________ -->
     <h1 class="main-title">
         Производство <br /> грузопассажирских  <br /> алюминиевых лодок <br /> аппарельного типа

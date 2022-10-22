@@ -12,13 +12,15 @@ new Swiper('.choise__slider', {
 });
 
 let catalogSwiper, gallerySwiper;
-let init = false;
+let catalogInit = false;
+let galleryInit = false;
 function swiperMode() {
   let mobile = window.matchMedia("(max-width: 767px)");
   
+  console.log("mobile.matches", mobile.matches)
   if (mobile.matches) {
-    if (!init) {
-      init = true;
+    if (!catalogInit) {
+    catalogInit = true;
       catalogSwiper = new Swiper('.catalog__slider', {
         // Optional parameters
         centeredSlides: true,
@@ -31,22 +33,27 @@ function swiperMode() {
           clickable: true
         },
     });
-    gallerySwiper = new Swiper('.gallery__slider', {
-        // Optional parameters
-        centeredSlides: true,
-        loop: true,
-        spaceBetween: 40,
-        
-        // If we need pagination
-        pagination: {
-          el: '.gallery__pagination',
-          clickable: true
-        },
-    });
+    }   
+    if(!galleryInit) {
+        galleryInit = true;
+        gallerySwiper = new Swiper('.gallery__slider', {
+            // Optional parameters
+            centeredSlides: true,
+            loop: true,
+            spaceBetween: 40,
+            
+            // If we need pagination
+            pagination: {
+            el: '.gallery__pagination',
+            clickable: true
+            },
+        });
     }
   } else {
     catalogSwiper?.destroy();
-    init = false;
+    gallerySwiper?.destroy();
+    catalogInit = false;
+    galleryInit = false;
   }
 }
 
