@@ -10,9 +10,7 @@ $char-width: 450px
     &::before
         content: "—\00a0"
         vertical-align: middle
-.header-wr
-    background-color: transparent
-    background: $mobBg  url(../images/bg/article.jpg) top center / cover no-repeat
+        
 .page
     color: $textWhite
     overflow: hidden
@@ -20,7 +18,7 @@ $char-width: 450px
         max-width: 550px
         width: 100%
     &__top-wr
-
+        padding-top: 136px
         &::before
             content: ""
             width: 100%
@@ -130,7 +128,8 @@ $char-width: 450px
 
 @include media-max($sm)
     .page
-
+        &__top-wr
+            padding-top: 120px
         &__top
             padding: 20px 0 0
             display: block

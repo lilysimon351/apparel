@@ -96,7 +96,8 @@ ul
     list-style: none
 section
     overflow: hidden
-
+address
+    font-style: normal
 /* cols */
 
 .cols
@@ -160,8 +161,15 @@ section
     height: 100px
     color: $textBlack
     &-wr
-        z-index: 3
+        z-index: 10
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
         background: none
+        transition: background-color 0.2s
+    &-wr.sticky
+        background-color: $mobBg
     .logo-menu-wr
         @extend %flex
         align-items: center
@@ -282,15 +290,6 @@ section
 @include media-max($sm)
     .header
         color: $textWhite
-        &-wr
-            background: $mobBg
-            position: fixed
-            position: sticky
-            position: -webkit-sticky
-            top: 0
-            left: 0
-            z-index: 10
-            width: 100%
         &__logo
             
             &--all

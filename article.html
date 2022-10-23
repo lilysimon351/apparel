@@ -97,6 +97,22 @@
             }
         })
     </script>
+        <script>
+            
+            window.addEventListener('load', toSticky);
+            window.addEventListener('scroll', toSticky);
+
+            var header = document.querySelector(".header-wr");
+            var sticky = header.offsetTop;
+
+            function toSticky() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
     <!-- __________ END HEADER __________ -->
 
     
@@ -118,11 +134,11 @@
                     </div>
 
                     <div class="page__conf">
-                        <a class="to-conf btn btn--pure" href="#">конфигуратор</a>
-                        <a class="btn__buy btn" href="#">купить</a>
+                        <a class="to-conf btn btn--pure goto" href="#config">конфигуратор</a>
+                        <a class="btn__buy btn goto" href="#offer">купить</a>
                     </div>
                     <div class="page__buy">
-                        <a class="btn" href="#">купить</a>    
+                        <a class="btn goto" href="#offer">купить</a>    
                         <span class="page__price price">1.000.000 руб</span>
                     </div>
                     <div class="page__character">
@@ -291,7 +307,7 @@
                 </div>
             </div>
         </section>
-        <section class="config-wr">
+        <section id="config" class="config-wr">
             <div class="container">
                 <h2 class="config__title heading with-wave black">конфигуратор</h2>
                 <p class="config__subtitle black tac">Выберите подходящую модель</p>
@@ -706,7 +722,7 @@
                                 <span class="total">итого цена</span>
                                 <span class="price"><span class="amount" data-price-initial="1000000">1.000.000</span> руб</span>
                             </div>
-                            <a class="config__price-btn btn" href="#">купить</a>
+                            <a class="config__price-btn btn goto" href="#offer">купить</a>
                         </div>
                     </div>
                 </div>
@@ -807,7 +823,7 @@
 
 
         <!-- __________ OFFER __________ -->
-        <section class="offer-wr wavy-bg">
+        <section id="offer" class="offer-wr wavy-bg">
             <div class="container">
                 <h2 class="offer__title heading with-wave">ЗАКАЗАТЬ РАСЧЕТ ЦЕНЫ</h2>
                 <div class="offer__form">
@@ -888,6 +904,44 @@
         <!-- __________ END FOOTER __________ -->
     
     </div>
+    <script>
+        /*
+        @param time: the exact amount of time the scrolling will take (in milliseconds)
+        @param pos: the y-position to scroll to (in pixels)
+        */
+        function scrollToSmoothly(pos, time) {
+            var currentPos = window.pageYOffset;
+            var start = null;
+            if(time == null) {time = 500};
+            pos = +pos, time = +time;
+            window.requestAnimationFrame(function step(currentTime) {
+                start = !start ? currentTime : start;
+                var progress = currentTime - start;
+                if (currentPos < pos) {
+                    window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos);
+                } else {
+                    window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time));
+                }
+                if (progress < time) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    window.scrollTo(0, pos);
+                }
+            });
+        }
+        document.querySelectorAll(".goto").forEach(function (a) {
+            a.addEventListener("click", function (event) {
+                event.preventDefault();
+                const hash = event.target.getAttribute("href");
+                const scrollTarget = document.querySelector(hash);
+                
+                // Some additional logic
+                const headerHeight = 100;
+                scrollToSmoothly(scrollTarget.offsetTop - headerHeight)
+            });
+        });
+
+    </script>
     <script src="./assets/scripts/slider/swiper-bundle.min.js"></script>
     <script src="./assets/scripts/gallery.js"></script>
     <script src="./assets/scripts/config.js"></script>

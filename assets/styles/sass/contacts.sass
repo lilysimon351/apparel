@@ -1,0 +1,98 @@
+@import 'vars'
+@import 'colors'
+@import 'media'
+@import 'typography'
+$gap: 46px
+
+.contacts-wr
+    padding: 140px 0 120px
+    background: $mobBg url(../images/bg/article.jpg) center / cover no-repeat
+.contacts
+    &__title
+    &__box
+        @extend %flex
+        p
+            margin: 20px 0
+        .heading
+            text-align: left
+        img
+            position: absolute
+            top: 0 
+            left: calc(100% + $gap)
+            max-width: 436px
+    &__top
+        margin: 60px 0 100px
+    &__left
+        width: 50%
+        padding-right: $gap
+    &__right
+        width: 50%
+        padding-left: $gap
+
+    &__bottom
+    
+    &__subheading
+        color: $secText
+        letter-spacing: 0.2em
+        text-transform: uppercase   
+        margin-bottom: 10px
+    &__info
+        margin-bottom: 36px
+    &__conutry
+        margin-top: 56px
+.map
+    height: 500px
+    border-radius: 5px
+    overflow: hidden
+    iframe
+        width: 100%
+        height: 100%
+
+@include media-max($lg)
+    .contacts-wr
+        padding: 140px 0 90px
+    .contacts
+        &__top
+            margin-bottom: 70px
+@include media-max($md)
+    .contacts-wr
+        padding-bottom: 70px
+    .contacts
+        &__box
+            display: block
+            img
+                position: static
+                display: block
+                max-width: 330px
+                width: 100%
+                margin: 60px auto
+        &__left
+            width: 100%
+            padding-right: 0
+        &__right
+            width: 100%
+            padding-left: 0
+        &__bottom
+            .contacts__right
+                margin-top: 85px
+    
+@include media-max($sm)
+    .contacts-wr
+        padding: 100px 0 40px
+        background: $mobBg url(../images/bg/contacts-mob.jpg) center / cover no-repeat
+    .contacts
+        
+        &__top
+            margin: 30px 0 60px
+        &__bottom
+            .contacts__right
+                margin-top: 40px
+        &__subheading
+            @include font(14px, 17px)
+    .map
+        margin: 0 -15px
+        border-radius: 0
+    .contacts__info, .contacts__conutry
+        display: inline-block
+    .contacts__conutry
+        margin: 0 0 0 20px

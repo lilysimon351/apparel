@@ -95,6 +95,22 @@
             }
         })
     </script>
+    <script>
+        
+        window.addEventListener('load', toSticky);
+        window.addEventListener('scroll', toSticky);
+
+        var header = document.querySelector(".header-wr");
+        var sticky = header.offsetTop;
+
+        function toSticky() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
     <!-- __________ END HEADER __________ -->
     <h1 class="main-title">
         Производство <br /> грузопассажирских  <br /> алюминиевых лодок <br /> аппарельного типа

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparel</title>
+    <link rel="stylesheet" href="./assets/fonts/BebasNeueCyrillic/style.css">
+    <link rel="stylesheet" href="./assets/fonts/MontserratMedium/style.css">
+    <link rel="stylesheet" href="./assets/styles/mainCSS.min.css">
+    <link rel="stylesheet" href="./assets/styles/contacts.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <div class="contacts-page">
+    
+        <!-- __________ HEADER __________ -->
+        <div class="header-wr">
+            <div class="container">
+                <header class="header header--white">
+                    <div class="logo-menu-wr">
+                        <div class="burger" tabindex="1">
+                            <span class="sr-only">Показать/скрыть меню</span>
+                            <svg class="svg-icon burger__icon" width="24" height="14"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#menu" />
+                            </svg>
+                            <svg class="svg-icon menu-close" width="24" height="24"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#close" />
+                            </svg>
+                        </div>
+                        <a href="/" class="header__logo">
+                            <span class="sr-only">Apparel Boats</span>
+                            <svg class="svg-icon header__logo--all" width="130" height="44"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#logo" />
+                            </svg>
+                            <svg class="svg-icon header__logo--mob" width="47" height="61"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#logo-vertical" />
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="header__menu">
+                        <li><a href="#">о нас</a></li>
+                        <li><a href="#">модели</a></li>
+                        <li><a href="#">галерея</a></li>
+                        <li><a href="#">экспедиции</a></li>
+                        <li><a href="#">лодка от производителя</a></li>
+                        <li><a href="#">контакты</a></li>
+                    </ul>
+                    <div class="header__social">
+                        <a href="tel:+79226531847" class="btn btn--pure header__phone menuText">+7(922) 653-18-47</a>
+                        <br />
+                        <a class="header__phone menuText" href="tel:+7(3462) 45-11-01">+7(3462) 45-11-01</a>
+                        <br />
+                        <a class="header__phone menuText" href="tel:+7(904) 472-45-77">+7(904) 472-45-77</a>
+                        <div class="social__menu">
+                            <a class="social__menu-item" href="instagram.com" target="_blank">
+                                <span class="sr-only">Инстаграм канал</span>
+                                <svg class="svg-icon" width="32" height="32"> 
+                                    <use xlink:href="./assets/images/icons/iconsSprite.svg#insta" />
+                                </svg>
+                            </a>
+                            <a class="social__menu-item" href="youtube.com" target="_blank">
+                                <span class="sr-only">Ютуб канал</span>
+                                <svg class="svg-icon" width="32" height="32"> 
+                                    <use xlink:href="./assets/images/icons/iconsSprite.svg#yt" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__info">
+                        <div class="header__mails">
+                            <a href="mailto:motor@rocotmoto.ru">motor@rocotmoto.ru</a>
+                            <br />
+                            <a href="mailto:sa@rocotmoto.ru">sa@rocotmoto.ru</a>
+                        </div>
+                        <div class="header__address">
+                            ХМАО-ЮГРА г. Сургут, <br>
+                            Нефтеюганское шоссе,
+                            46/1, 628406
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <script>
+            let burger = document.querySelector('.burger');
+            let opened = false;
+            burger?.addEventListener('click', function() {
+                if(!opened) {
+                    opened = true;
+                    document.querySelector('.header-wr').classList.add('header--opened')
+                } else {
+                    opened = false;
+                    document.querySelector('.header--opened').classList.remove('header--opened')
+                }
+            })
+        </script>
+        <script>
+            
+            window.addEventListener('load', toSticky);
+            window.addEventListener('scroll', toSticky);
+
+            var header = document.querySelector(".header-wr");
+            var sticky = header.offsetTop;
+
+            function toSticky() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+        <!-- __________ END HEADER __________ -->
+
+        <section class="contacts-wr">
+            <div class="container">
+                <h1 class="contacts__title heading with-wave">контакты</h1>
+
+                <div class="contacts__box contacts__top">
+                    <div class="contacts__left">
+                        <p>Компания APPARELBOATS –  основана в 2003 году в городе Сургут и является дилером подвесных лодочных моторов японских производителей.</p>
+                        <p>Изучив потребности регионов Российской Федерации, в том числе Ханты-Мансийского автономного округа – Югры, в 2015 г. компания APPARELBOATS принимает решение о запуске производства скоростных грузопассажирских глиссирующих лодок (катеров) аппарельного типа.</p>
+                        
+                        <img src="./assets/images/icons/contacts-logo.png" alt="Apparel">
+                        <p>Наши Катера могут применяться не только в сферах туризма и оказания транспортных услуг, но и для обеспечения безопасности и контроля судоходства в сферах государственных служб.</p>
+                        <p>Имеющаяся в настоящее время на вооружении инспекторов водно-моторная техника не имеет таких ёмкостных, скоростных и манёвренных характеристик, как у Катеров аппарельного типа, а потому не может обеспечить возможность привлечения к ответственности большего процента числа нарушителей на водных объектах.</p>
+                        <p>С таким судном, инспекторы по маломерным судам Центра ГИМС МЧС будут на воде более маневренны и быстроходны.</p>
+                    </div>
+                    <div class="contacts__right">
+                    </div>
+                </div>
+                <div class="contacts__box contacts__bottom">
+                    <div class="contacts__left">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1918.1730966232176!2d73.43654561584331!3d61.26449018237728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43739777b92c5317%3A0x9769a24991466a1d!2z0J3QtdGE0YLQtdGO0LPQsNC90YHQutC-0LUg0YguLCA0Niwg0KHRg9GA0LPRg9GCLCDQpdCw0L3RgtGLLdCc0LDQvdGB0LjQudGB0LrQuNC5INCw0LLRgtC-0L3QvtC80L3Ri9C5INC-0LrRgNGD0LMsINCg0L7RgdGB0LjRjywgNjI4NDAx!5e0!3m2!1sru!2s!4v1666552853452!5m2!1sru!2s" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contacts__right">
+                        <address>
+                            <div class="contacts__subheading ">Адрес</div>
+                            <div class="contacts__info heading">
+                                Нефтеюганское ш., 46
+                            </div>
+                            <div class="contacts__subheading ">Ханты-Мансийский автономный округ</div>
+                            <div class="contacts__info heading">
+                                сургут
+                            </div>
+                            <div class="contacts__conutry heading blue">
+                                россия
+                            </div>
+                        </address>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- __________ FOOTER __________ -->
+        <footer class="footer-wr">
+            <div class="container">
+                <div class="footer">
+                    <a href="/" class="footer__logo">
+                        <span class="sr-only">Apparel Boats</span>
+                        <svg class="svg-icon" width="130" height="44"> 
+                            <use xlink:href="./assets/images/icons/iconsSprite.svg#logo" />
+                        </svg>
+                    </a>
+                    <div class="footer__social social__menu">
+                        <a class="social__menu-item" href="instagram.com" target="_blank">
+                            <span class="sr-only">Инстаграм канал</span>
+                            <svg class="svg-icon" width="32" height="32"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#insta" />
+                            </svg>
+                        </a>
+                        <a class="social__menu-item" href="youtube.com" target="_blank">
+                            <span class="sr-only">Ютуб канал</span>
+                            <svg class="svg-icon" width="34" height="35"> 
+                                <use xlink:href="./assets/images/icons/iconsSprite.svg#yt" />
+                            </svg>
+                        </a>
+                    </div>
+                    <nav class="footer__menus">
+                        <ul class="footer__menu">
+                            <li><a href="">о нас</a></li>
+                            <li><a href="">модели</a></li>
+                            <li><a href="">галерея</a></li>
+                        </ul>
+                        <ul class="footer__menu">
+                            <li><a href="">экспедиции</a></li>
+                            <li><a href="">контакты</a></li>
+                            <li><a href="">лодка от производителя</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__info">
+                        <div class="footer__mails">
+                            <a href="mailto:motor@rocotmoto.ru">motor@rocotmoto.ru</a>
+                            <br />
+                            <a href="mailto:sa@rocotmoto.ru">sa@rocotmoto.ru</a>
+                        </div>
+                        <div class="footer__address">
+                            ХМАО-ЮГРА г. Сургут, <br>
+                            Нефтеюганское шоссе,
+                            46/1, 628406
+                        </div>
+                    </div>
+                    <div class="footer__phones">
+                        <a href="tel:79226531847">+7(922) 653-18-47</a>
+                        <br />
+                        <a href="tel:+7(3462) 45-11-01">+7(3462) 45-11-01</a>
+                        <br />
+                        <a href="tel:+7(904) 472-45-77">+7(904) 472-45-77</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- __________ END FOOTER __________ -->
+    
+    </div>
+    
+</body>
+</html>

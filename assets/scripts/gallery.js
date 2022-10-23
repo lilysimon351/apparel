@@ -4,7 +4,7 @@ function galleryMode() {
   let mobile = window.matchMedia("(max-width: 767px)");
   
     if (mobile.matches) {
-        console.log("SDf")
+      
         if(!galleryInit) {
             galleryInit = true;
             gallerySwiper = new Swiper('.gallery__slider', {
