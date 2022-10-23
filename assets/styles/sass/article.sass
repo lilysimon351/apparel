@@ -237,7 +237,7 @@ $char-width: 450px
         transform: translateX(-50%) 
         z-index: 1
         .svg-icon
-            margin-right: 10px
+            margin: 0 5px
         &:hover
             opacity: 1
     &__btn
@@ -245,7 +245,7 @@ $char-width: 450px
         @extend %align-center
         cursor: pointer
         white-space: nowrap
-        &:first-of-type
+        &--base
             &::after
                 content: ""
                 width: 1px
@@ -328,43 +328,67 @@ $char-width: 450px
                 display: block
                 text-align: left
                 margin-bottom: 5px
+        &__bottom
+            margin-top: 60px
 @include media-max($md)
     .config
         padding: 50px 30px
+        &__box
+            margin: 0 -15px
+        &__tab--active .swiper-wrapper 
+            display: flex
+            gap: 0
+        &__tab
+            padding-bottom: 40px
+        &__item
+            margin: 20px auto
+            max-width: max-content
         &__price
             position: static
             margin-bottom: 30px
             .total
                 text-align: center
                 margin-bottom: 5px
-//
-.config
-    &__box
+        &__bottom
+            margin-top: 30px
 
-    &__btns
+@include media-max($sm)
+    .config
+        padding: 50px 20px
+        background: $mobBg
+        border-radius: 0
+        margin-top: 70px
+        &::before
+            content: none
+        &-wr
+            padding: 0 0 50px
+        &__btns
+            width: 96%
+            height: unset
+            flex-direction: column
+            padding: 15px 10px
+            border-radius: 40px
+        &__btn
+            white-space: break-spaces
+            font-size: 12px
+            .svg-icon:first-of-type
+                display: none
+        &__btn--base
+            margin-bottom: 8px
+            &::after
+               content: none 
+                
+        &__price
+            @include font(24px, 30px, $bebas)
+            .total
+                color: $textWhite
 
-    &__top
-
-    &__base
-
-    &__item
-
-    &__checkbox
-
-    &__label
-
-    &__extra
-
-    &__bottom
-
-    &__btn
-
-    &__price
-
-        .svg-icon
-
-        .total
-
-        .blue
-
-        .price 
+.article-page .gallery-wr
+    background: $mobBg url(../images/bg/article-gal.jpg) top center / cover no-repeat
+    @include media-max($sm)
+        background: $mobBg url(../images/bg/article-gal-mob.jpg) top center / cover no-repeat
+.article-page .offer-wr
+    background: $mobBg url(../images/bg/article-offer.jpg) top center / cover no-repeat
+    padding-top: 10px
+    @include media-max($sm)
+        background: $mobBg url(../images/bg/article-offer-mob.jpg) top center / cover no-repeat

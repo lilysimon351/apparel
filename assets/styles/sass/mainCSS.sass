@@ -26,6 +26,9 @@ $fonts: $fonts
         @if (nth($types, $i) == 'subHeading')
             @include media-max($md)
                 @include font(nth($fonts, 2)... )
+@include media-max($sm)
+    .heading
+        @include  font(24px, 30px, $bebas)
 // end typography classes
 
 *, ::before, ::after
@@ -470,6 +473,8 @@ section
         text-align: center
         
 @include media-max($sm)
+    .offer__form
+        margin-top: 50px
     .offer-wr
         padding-bottom: 0
     .form-wr
@@ -480,6 +485,8 @@ section
         border-radius: 0
         &__input-wr
             margin: 30px 0
+        &__title br
+            display: none
 // _____________ END OFFER _____________
 
 // _____________ FOOTER _____________
