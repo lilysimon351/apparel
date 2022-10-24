@@ -413,14 +413,19 @@ address
             height: 166px
 @include media-max($sm)
     .gallery
-        width: 290px
+        max-width: $mob-max-cont
         margin-top: 40px
         .swiper-wrapper
             flex-wrap: nowrap
         &__item
-            height: 189px
-            width: 290px
+            height: unset
+            width: 100%
             overflow: hidden
+            padding-top: 65%
+            img
+                position: absolute
+                top: 0
+                left: 0
 @include media-min($sm)
     .gallery__pagination
         display: none
