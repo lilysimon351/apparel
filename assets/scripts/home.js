@@ -4,6 +4,7 @@ new Swiper('.choise__slider', {
     spaceBetween: 20,
     loop: true,
     loopAdditionalSlides: 1,
+    preloadImages: false,
     pagination: {
       el: '.choise__pagination',
       clickable: true
@@ -25,6 +26,7 @@ function swiperMode() {
             loop: true,
             spaceBetween: 40,
             loopAdditionalSlides: 1,
+            preloadImages: false,
             // If we need pagination
             pagination: {
                 el: '.catalog__pagination',
@@ -56,6 +58,7 @@ new Swiper('.producer__slider', {
     initialSlide: 1,
     spaceBetween: 0,
     setWrapperSize: true, 
+    preloadImages: false,
     // Responsive breakpoints
     breakpoints: {
         768: {

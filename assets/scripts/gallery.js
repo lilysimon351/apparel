@@ -12,6 +12,7 @@ function galleryMode() {
                 centeredSlides: true,
                 loop: true,
                 spaceBetween: 40,
+                preloadImages: false,
                 
                 // If we need pagination
                 pagination: {

@@ -9,6 +9,7 @@ function configMode() {
             baseInit = true;
             baseSwiper = new Swiper('.config__base', {
                 // Optional parameters
+                preloadImages: false,
                 
                 // If we need pagination
                 pagination: {
@@ -38,7 +39,7 @@ function configMode() {
             extraInit = true;
             extraSwiper = new Swiper('.config__extra', {
                 // Optional parameters
-                
+                preloadImages: false,
                 // If we need pagination
                 pagination: {
                     el: '.extra__pagination',
