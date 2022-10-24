@@ -24,7 +24,7 @@ function swiperMode() {
             centeredSlides: true,
             loop: true,
             spaceBetween: 40,
-            
+            loopAdditionalSlides: 1,
             // If we need pagination
             pagination: {
                 el: '.catalog__pagination',

@@ -10,7 +10,20 @@ $char-width: 450px
     &::before
         content: "—\00a0"
         vertical-align: middle
-        
+.with-r-border
+    @extend %rounded
+    &::before
+        $offset: 10px
+        content: ""
+        width: calc( 100% - $offset*2 )
+        height: calc( 100% - $offset*2 )
+        border: 1px solid $textWhite
+        border-radius: 10px
+        position: absolute
+        top: $offset
+        left: $offset
+        @include media-max($sm)
+            content: none
 .page
     color: $textWhite
     overflow: hidden
@@ -23,7 +36,7 @@ $char-width: 450px
             content: ""
             width: 100%
             height: calc(100% + 100px)
-            background: $mobBg  url(../images/bg/article.jpg) top center / cover no-repeat
+            background: $mobBg  url(../images/bg/article.jpg) top center / 100% 116% no-repeat
             position: absolute
             top: -100px
             left: 0
@@ -74,9 +87,8 @@ $char-width: 450px
 .char
     &__block
         padding: 30px 33px
-        background: $mobBg url(../images/bg/character.png) top left / 100% 100% no-repeat
+        background: $mobBg url(../images/bg/character.jpg) center / cover no-repeat
         color: $textWhite
-        @extend %rounded
         @include font(12px, 18px)
         margin-bottom: 75px
     &__table
@@ -214,17 +226,6 @@ $char-width: 450px
     padding: 50px
     margin-top: 100px
     background: $mobBg url(../images/bg/config.jpg) center / cover no-repeat
-    @extend %rounded
-    &::before
-        $offset: 10px
-        content: ""
-        width: calc( 100% - $offset*2 )
-        height: calc( 100% - $offset*2 )
-        border: 1px solid $textWhite
-        border-radius: 10px
-        position: absolute
-        top: $offset
-        left: $offset
         
     &__btns
         @include font(14px, 17px)
@@ -357,8 +358,6 @@ $char-width: 450px
         background: $mobBg
         border-radius: 0
         margin-top: 70px
-        &::before
-            content: none
         &-wr
             padding: 0 0 50px
         &__btns
